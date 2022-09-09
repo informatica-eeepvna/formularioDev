@@ -1,83 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <title>Cadastro</title>
-     
-    </head>
-    <body>
-      <div>
-        <h1 id="titulo">Cadastro de DEVs</h1>
-        <p id="subtitulo">Complete suas informações</p>
-      </div>
-      <form>
-        <fieldset class="grupo">
-          <div class="campo">
+<head>
+  <title>Cadastro</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <div class="text-center mt-5">
+      <h1 id="titulo" class="fw-bold">Cadastro de DEVs</h1>
+      <p id="subtitulo">Complete as suas informações</p>
+    </div>
+    <form>
+      <fieldset class="grupo">
+        <div class="campo">
           <label for="nome"><strong>Nome</strong></label>
-          <input type="text" name="nome" id="nome" required></input>
-          </div>
-          <div class="campo">
-             <label for="sobrenome"><strong>Sobrenome</strong></label>
-          <input type="text" name="sobrenome" id="sobrenome" required>
-            </div>
-          </fieldset>
-      <br>
-      <div class="campo">
-            <label for="email"><strong>Email</strong></label>
-          <input type="email" name="email" id="email" required>
-      </div>
-      <br>
-      <div class="campo">
-        <label><strong>De qual lado da aplicação você desenvolve?</strong></label>
-        <label>
-        <input type="radio" nome="devweb" value="frontend" checked>Front-end
-        </input>
-        </label>
-      <label>
-      <input type="radio" nome="devweb" value="backend">Back-end
-        </input>
-      </label>
-      <label>
-      <input type="radio" nome="devweb" value="fullstack">Fullstack
-        </input>
-    </label>
+          <input class="form-control mb-3" type="text" name="nome" id="nome" required></input>
         </div>
-    <br>
-    <div class="campo">
-      <label for="senioridade"><strong> Senioridade </strong></label>
-      <select id="senioridade">
-        <option selected disable value="">Selecione</option>
-        <option>Junior</option>
-            <option>Pleno</option>
-            <option>Senior</option> </select>
-     
-    </div>
-    <fieldset class="grupo">
-      <div class="campo">
-        <label><strong>Selecione as tecnologias que utiliza:</strong></label><br><br>
-        <input type="checkbox" id="tecnologia1" value="HTML">
-        <label type="tecnologia1">HTML</label>
-         <input type="checkbox" id="tecnologia2" value="CSS">
-        <label type="tecnologia2">CSS</label>
-         <input type="checkbox" id="tecnologia3" value="javascript">
-        <label type="tecnologia3">Javascript</label>
-         <input type="checkbox" id="tecnologia4" value="PHP">
-        <label type="tecnologia4">PHP</label>
-         <input type="checkbox" id="tecnologia5" value="C#">
-        <label type="tecnologia5">C#</label>
-         <input type="checkbox" id="tecnologia6" value="python">
-        <label type="tecnologia6">Python</label>
-         <input type="checkbox" id="tecnologia7" value="java">
-        <label type="tecnologia7">Java</label>
-      </div>
+        <div class="campo">
+          <label for="sobrenome"><strong>Sobrenome</strong></label>
+          <input class="form-control mb-3" type="text" name="sobrenome" id="sobrenome" required>
+        </div>
       </fieldset>
-    <div class="campo">
-      <br>
-      <label><strong>Conte um pouco da sua experiência:</strong></label>
-      <textarea row="6" style="width: 26em" id="experiencia" nome="experiencia"></textarea>
-    </div>
-    <button class="botao" type="submit">Concluir</button>
-        </form>
-    
+      <div class="campo">
+        <label for="email"><strong>Email</strong></label>
+        <input class="form-control mb-3" type="email" name="email" id="email" required>
+      </div>
+      <div class="campo">
+        <label class="form-label mb-4 mt-3 me-3"><strong>De qual lado da aplicação você desenvolve?</strong></label>
+        <label class="me-3">
+          <input class="form-check-input me-1" type="radio" name="devweb" value="frontend" checked>Front-end
+          </input>
+        </label>
+        <label class="me-3">
+          <input class="form-check-input me-1" type="radio" name="devweb" value="backend">Back-end
+          </input>
+        </label>
+        <label>
+          <input class="form-check-input me-1" type="radio" name="devweb" value="fullstack">Fullstack
+          </input>
+        </label>
+      </div>
+      <div class="campo">
+        <label class="form-label" for="senioridade"><strong> Senioridade </strong></label>
+        <select class="form-select" id="senioridade">
+          <option selected disable value="">Selecione</option>
+          <option>Junior</option>
+          <option>Pleno</option>
+          <option>Senior</option>
+        </select>
+  
+      </div>
+      <fieldset class="grupo">
+        <div class="campo">
+          <label><strong>Selecione as tecnologias que você utiliza:</strong></label><br><br>
+          <input class="btn-check" type="checkbox" id="tecnologia1" value="HTML" autocomplete="off">
+          <label class="btn btn-outline-primary" for="tecnologia1">HTML</label>
+          <input class="btn-check" type="checkbox" id="tecnologia2" value="CSS">
+          <label class="btn btn-outline-primary" for="tecnologia2">CSS</label>
+          <input class="btn-check" type="checkbox" id="tecnologia3" value="javascript">
+          <label class="btn btn-outline-primary" for="tecnologia3">Javascript</label>
+          <input class="btn-check" type="checkbox" id="tecnologia4" value="PHP">
+          <label class="btn btn-outline-primary" for="tecnologia4">PHP</label>
+          <input class="btn-check" type="checkbox" id="tecnologia5" value="C#">
+          <label class="btn btn-outline-primary" for="tecnologia5">C#</label>
+          <input class="btn-check" type="checkbox" id="tecnologia6" value="python">
+          <label class="btn btn-outline-primary" for="tecnologia6">Python</label>
+          <input class="btn-check" type="checkbox" id="tecnologia7" value="java">
+          <label class="btn btn-outline-primary" for="tecnologia7">Java</label>
+        </div>
+      </fieldset>
+      <div class="campo">
+        <br>
+        <label class="form-label" for="experiencia"><strong>Conte um pouco da sua experiência:</strong></label>
+        <textarea class="form-control" id="experiencia" rows="3"></textarea>
+      </div>
+      <button class="btn btn-primary mt-4" type="submit">Concluir</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"></script>
+      <label for="exampleColorInput" class="form-label">Edite a cor da página</label>
+      <div class="mb-3 row">
+<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+  </div>
 </body>
 </html>
