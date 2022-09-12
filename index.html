@@ -1,83 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <head>
         <title>Cadastro</title>
-     
+     <link rel="stylesheet" href="./style.css">
     </head>
+    
     <body>
+      
+      
+        <div class="container">
       <div>
-        <h1 id="titulo">Cadastro de DEVs</h1>
+        <h1 id="titulo">Cadastro de informações</h1>
         <p id="subtitulo">Complete suas informações</p>
       </div>
       <form>
         <fieldset class="grupo">
           <div class="campo">
-          <label for="nome"><strong>Nome</strong></label>
-          <input type="text" name="nome" id="nome" required></input>
+          <div for="nome" class="shadow p-3 mb-5 bg-body rounded "><strong class="blue">Nome:</strong></label>
+          <input class="form-control"type="text" name="nome" id="nome" required></input>
           </div>
           <div class="campo">
-             <label for="sobrenome"><strong>Sobrenome</strong></label>
-          <input type="text" name="sobrenome" id="sobrenome" required>
+             <div for="sobrenome" class="shadow p-3 mb-5 bg-body rounded "><strong class="blue">Sobrenome:</strong></label>
+          <input class="form-control"type="text" name="sobrenome" id="sobrenome" required>
             </div>
           </fieldset>
       <br>
       <div class="campo">
-            <label for="email"><strong>Email</strong></label>
-          <input type="email" name="email" id="email" required>
+            <div for="email" class="shadow p-3 mb-5 bg-body rounded "><strong class="blue">Email:</strong></label>
+        
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">name@example.com</label>
+              </div>
       </div>
       <br>
       <div class="campo">
-        <label><strong>De qual lado da aplicação você desenvolve?</strong></label>
-        <label>
-        <input type="radio" nome="devweb" value="frontend" checked>Front-end
-        </input>
-        </label>
-      <label>
-      <input type="radio" nome="devweb" value="backend">Back-end
-        </input>
-      </label>
-      <label>
-      <input type="radio" nome="devweb" value="fullstack">Fullstack
-        </input>
-    </label>
+        <label><strong class="gray">De qual lado da aplicação você desenvolve?</strong></label>
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+          <label class="btn btn-outline-primary me-2" for="btnradio1">Front-End</label>
+        
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+          <label class="btn btn-outline-primary me-2" for="btnradio2">Back-End</label>
+        
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+          <label class="btn btn-outline-primary me-2" for="btnradio3">Fullstack</label>
+        </div>
         </div>
     <br>
     <div class="campo">
-      <label for="senioridade"><strong> Senioridade </strong></label>
-      <select id="senioridade">
+      <label for="senioridade"><strong class="gray"> Senioridade </strong></label>
+      <select class="btn btn-primary ">
         <option selected disable value="">Selecione</option>
-        <option>Junior</option>
-            <option>Pleno</option>
-            <option>Senior</option> </select>
+        <option> Inferior </option>
+            <option>Mediano</option>
+            <option>Superior </option> </select>
      
     </div>
-    <fieldset class="grupo">
-      <div class="campo">
-        <label><strong>Selecione as tecnologias que utiliza:</strong></label><br><br>
-        <input type="checkbox" id="tecnologia1" value="HTML">
-        <label type="tecnologia1">HTML</label>
-         <input type="checkbox" id="tecnologia2" value="CSS">
-        <label type="tecnologia2">CSS</label>
-         <input type="checkbox" id="tecnologia3" value="javascript">
-        <label type="tecnologia3">Javascript</label>
-         <input type="checkbox" id="tecnologia4" value="PHP">
-        <label type="tecnologia4">PHP</label>
-         <input type="checkbox" id="tecnologia5" value="C#">
-        <label type="tecnologia5">C#</label>
-         <input type="checkbox" id="tecnologia6" value="python">
-        <label type="tecnologia6">Python</label>
-         <input type="checkbox" id="tecnologia7" value="java">
-        <label type="tecnologia7">Java</label>
+    <label class="mt-3"><strong class="gray">Selecione as tecnologias que você utiliza:   </strong></label>
+    <fieldset class="campo mt-3">
+      <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+        <label class="btn btn-outline-primary me-3" for="btncheck1">HTML</label>
+      
+        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+        <label class="btn btn-outline-primary me-3" for="btncheck2">CSS</label>
+      
+        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+        <label class="btn btn-outline-primary me-3" for="btncheck3">Javascript</label>
+        
+          <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+          <label class="btn btn-outline-primary me-3" for="btncheck4">PHP</label>
+        
+          <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
+          <label class="btn btn-outline-primary me-3" for="btncheck5">C#</label>
+        
+          <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off">
+          <label class="btn btn-outline-primary me-3" for="btncheck6">Python</label>
+
+          <input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off">
+          <label class="btn btn-outline-primary me-3" for="btncheck7">Java</label>
+        
       </div>
+      
+    
       </fieldset>
+      
+      
     <div class="campo">
       <br>
-      <label><strong>Conte um pouco da sua experiência:</strong></label>
-      <textarea row="6" style="width: 26em" id="experiencia" nome="experiencia"></textarea>
+      <div class="shadow p-3 mb-5 bg-body rounded "><strong class="blue">Conte um pouco da sua experiência:</strong></label>
+      <textarea class="form-control" row="3" id="experiencia" nome="experiencia"></textarea></div>
     </div>
-    <button class="botao" type="submit">Concluir</button>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <div class="d-grid gap-2 col-6 mx-auto">
+        
+        <button class="btn btn-primary mt-3" type="button" onclick="alertarusuario('O cadastro finalizado com sucesso.')">Concluir</button> 
+        
+      </div>
+      
+    </div>
         </form>
-    
-</body>
+
+      </div>
+      
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="main.js"></script>
+      
+      </body>
 </html>
